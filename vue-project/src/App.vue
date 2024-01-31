@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterLink, RouterView } from 'vue-router';
 import SoyHeader from './components/SoyHeader.vue'
 import SoyFooter from './components/SoyFooter.vue'
 import Card from './components/Card.vue'
@@ -212,45 +211,31 @@ function reciboClick(a:string) {
   <SoyHeader>
 
   </SoyHeader>
-
+  
   
   <main>
     <br><br><br><br>
-    <section class="menu" id="menu">
+    
 
-<h1 class="heading"> Proximos <span>estrenos</span> </h1>
+<RouterView />
 
-</section>
+  <!-- <h1 v-if="superadmin">Eres usuario administrador</h1>
+  <h1 v-else>No eres usuario administrador</h1> -->
 
-  <h1 v-if="superadmin">Eres usuario administrador</h1>
-  <h1 v-else>No eres usuario administrador</h1>
-  <Card
+  <!-- <Card
     v-for="obra in obras"
     :id="obra.id"
     :titulo="obra.titulo"
     :descripcion="obra.descripcion"
-    />
+    /> -->
 
-  </main>
-  <SoyFooter>
+    <SoyFooter>
 
 </SoyFooter>
+  </main>
+  
 
 </template>
 
-<style scoped>
-.heading {
-  text-align: center;
-  color: #000000;
-  text-transform: uppercase;
-  padding-bottom: 3.5rem;
-  font-size: 4rem;
-}
-.heading span {
-  color: #F0D303;
-  text-transform: uppercase;
-}
 
-
-</style>
 

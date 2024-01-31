@@ -1,8 +1,14 @@
 <script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router';
 import TheWelcome from '../components/TheWelcome.vue';
 </script>
 
 <template>
+
+  <!-- <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav> -->
 
 <header class="header">
     <a href="">
@@ -10,13 +16,15 @@ import TheWelcome from '../components/TheWelcome.vue';
     </a>
 
     <nav class="navbar-header">
-      <a href="">Inicio</a>
-      <a href="">Cartelera</a>
-      <a href="">Proximos estrenos</a>
-      <a href="">Sobre Nosotros</a>
+    <RouterLink to="/">Inicio</RouterLink>
+    <RouterLink to="/cartelera">Cartelera</RouterLink>
+    <RouterLink to="/">Próximos Estrenos</RouterLink>
+    <RouterLink to="/about">Sobre Nosotros</RouterLink>
     </nav>
 
 </header>
+
+<!-- <RouterView /> -->
 </template>
 
 <style scoped>

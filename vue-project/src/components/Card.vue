@@ -13,7 +13,6 @@
   <div class="container">
     <h4><b>{{ titulo }}</b></h4> 
     <p>{{ descripcion }}</p>
-    <p>{{ imagen }}</p>
     
   </div>
   <button>Comprar</button>
